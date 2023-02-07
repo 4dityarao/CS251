@@ -1,0 +1,7 @@
+cars;USA
+toys;Japan
+cars;Germany
+cars;Japan
+tea;Sri Lanka
+spices;India
+tea;India
