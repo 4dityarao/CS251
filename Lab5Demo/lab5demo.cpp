@@ -29,30 +29,29 @@ int profanity_counter(string user_input){
 
 
 bool test1(){
-    //Good Gamer;
+  
     string user_input = "You dont play good but I respect you";
     return profanity_counter(user_input)==0;
 }
 
 bool test2(){
-    //Bad Gamer;
+    
     string user_input = "Stupid move! Only an absolute bufoon would do this";
     return profanity_counter(user_input)==2;
 }
 
 bool test3(){
-    //Oversmart gamer
+    
     string user_input = "You are stUpid bro.";
     return profanity_counter(user_input)==1;
-
 }
 
 int main(){
 int pass = 0;
      int fail = 0;
-     (test1()) ? pass++ :( cout<<"test 1 failed"<<endl,fail++);
-     (test2()) ? pass++ :( cout<<"test 2 failed"<<endl,fail++);
-     (test3()) ? pass++ :( cout<<"test 3 failed"<<endl,fail++);
+     (test1()) ? pass++ :fail++;
+     (test2()) ? pass++ :fail++;
+     (test3()) ? pass++ :fail++;
       cout << "test cases passed: " << pass << endl;
       cout << "test cases failed: " << fail << endl;
 return 0;
