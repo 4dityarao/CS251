@@ -76,3 +76,10 @@ return 0;
 //      }
 //     return counter;
 // }
+
+
+/* Questions
+
+* Why does test 3 fail?
+* What other tests can you think of? (Removing punctuation)
+*/
