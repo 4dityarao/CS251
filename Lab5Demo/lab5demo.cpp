@@ -12,36 +12,21 @@ The program simply takes the user input, lowers the first character in case the 
 with a profanity, and gives the count of the words from the block list of "no_no_words".
 */
 
-// int profanity_counter(string user_input){
-    
-//      set<string> no_no_words({"poop","stupid","bufoon","doodie"});     
-//      string word;
-//      int counter = 0;
-//      stringstream ss(user_input);
-//      while(ss>>word){
-//         word[0] = tolower(word[0]);
-//         if(no_no_words.find(word)!=no_no_words.end()){
-//             counter++;
-//         }
-//      }
-//     return counter;
-// }
-
 int profanity_counter(string user_input){
-    //Lowers every character
-     set<string> no_no_words({"poop","stupid","idiot","doodie", "bufoon"});     
+    
+     set<string> no_no_words({"poop","stupid","bufoon","doodie"});     
      string word;
      int counter = 0;
      stringstream ss(user_input);
      while(ss>>word){
-        for (int i=0;i<word.size();i++)
-            word[i] = tolower(word[i]);
+        word[0] = tolower(word[0]);
         if(no_no_words.find(word)!=no_no_words.end()){
             counter++;
         }
      }
     return counter;
 }
+
 
 
 
@@ -74,12 +59,21 @@ int pass = 0;
 return 0;
 }
 
-// Correct function that lowers each character of every word.
+
+
+
+
+
+
+
+
+
+
 
 
 // int profanity_counter(string user_input){
 //     //Lowers every character
-//      set<string> no_no_words({"poop","stupid","idiot","doodie"});     
+//      set<string> no_no_words({"poop","stupid","doodie", "bufoon"});     
 //      string word;
 //      int counter = 0;
 //      stringstream ss(user_input);
