@@ -12,6 +12,12 @@ int uncommonElements(const set<int> &a, const set<int> &b){
     set_difference(b.begin(),b.begin(),
                         a.begin(),a.end(),
                     inserter(uncommon,uncommon.end()));
+
+    //Another way to do it ->
+
+    // set_symmetric_difference(a.begin(),a.end(),
+    //                 b.begin(),b.begin(),
+    //                 inserter(uncommon,uncommon.end()));
     return uncommon.size();    
 }
 
