@@ -16,7 +16,19 @@ class Stack {
         }
 
         void push(string ele){
+            //Deal w stack overflow by doubling the capacity
+            // if(top==size-1){
+            //    string* temp = new string[size*2];
+            //     for(int i=0;i<size;i++){
+            //         temp[i] = arr[i];
+            //     }
+            //     delete[] arr;
+            //     arr = temp;
+            //     size = size*2;
+            // }
             arr[++top] = ele;
+            
+
         }
         string pop(){
             string result = arr[top];
@@ -24,15 +36,13 @@ class Stack {
             return result;
         }
         void show_stack(){
-            cout<<"\n\n************State of Stack************"<<endl;
+            cout<<"\n\n************Browser History************"<<endl;
             for(int i=top;i>=0;i--){
-                if(i==top){
-                    cout<<arr[i]<<" <--Top"<<endl;
-                }
-                else{
+
                 cout<<arr[i]<<endl;
-                }
+                
             }
+            cout << "***************************************" << endl;
         }
 };
 
@@ -44,11 +54,12 @@ int main(){
         s.push(a);
         s.show_stack();
     }
-    s.show_stack();
-    //Going back from shady_link to reddit.com
+     //Pressing back
     back_page = s.pop();
-    cout<<"Going back to "<<back_page;
+    cout<<"Going back to "<<back_page<<endl;
     //Visit few more links
+    cout<<"Browsing some more..."<<endl;
+    
     s.push("twitter.com");
     s.show_stack();
 
@@ -56,9 +67,7 @@ int main(){
     s.show_stack();
 
     s.push("reuters.com");
+    cout<<"Something";
     s.show_stack();
-    
-
-
-
+    return 0;
 }
